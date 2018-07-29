@@ -2,6 +2,7 @@
 
 1. android生命周期整个过程
 
+    ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystart_en.png)
 
 2. android生命周期的生存期
     * 完整生存期：Activity从创建Activity( onCreate() ) 到销毁Activity( onDestory() )所经历的时期
