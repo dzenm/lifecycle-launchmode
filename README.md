@@ -84,8 +84,14 @@
 
 2. singleTop：栈顶复用模式，如果Activity设置为singleTop的启动模式，并且该Activity处于栈顶，那么将不会创建一个新的Activity实例，它会复用当前Activity，并且会调用 onNewIntent() 方法，Activity启动时Intent添加flag指定为FLAG_ACTIVITY_NEW_TASK和指定为singleTop启动一样的效果。例如ABCD四个Activity顺序排列，D处于栈顶，在D里启动D，顺序为ABCD，不会再创建新的D，如果是standard启动模式，则会创建新的实例，顺序将变为ABCDD。
 
+    ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/singletopphoto.jpg)
+    
+    ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/singletoplog.png)
 
 3. singleTask：栈内复用模式，这是一种单实例模式。被启动的Activity指定为singleTask模式，如果当前栈内存在该Activity的实例，就不会创建新的Activity实例，会将栈内存在的Activity实例推向栈顶并调用 onNewIntent() 方法，并且在该实例之上的Activity实例推出栈外。例如ADBC，D被指定为singleTask，启动之后的顺序为AD，BC被推出栈，singleTask具有cleanTop的效果。
 
+    ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/singletask.gif)
 
-4. singleInstance：单实例模式，这是一种加强版的singleTask模式，它具有singleTask的所有特性，除此之外，它可以把设置为singleInstance的Activity放在一个单独的任务栈，由于栈内复用的特性后续请求不会再创建新的实例，除非该栈被销毁。
+4. singleInstance：单实例模式，这是一种加强版的singleTask模式，它具有singleTask的所有特性，同样的，它也会调用 onNewIntent() 方法。 除此之外，它可以把设置为singleInstance的Activity放在一个单独的任务栈，由于栈内复用的特性后续请求不会再创建新的实例，除非该栈被销毁。
+    
+    ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/singleinstance.gif)

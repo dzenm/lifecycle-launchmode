@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.din.activitystart.R
-import com.din.activitystart.singletask.FourActivity
 
 public class ThirdActivity : AppCompatActivity() {
 
