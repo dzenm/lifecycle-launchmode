@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <Button
+        
+        android:id="@+id/startActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick"
+        android:text="@string/start_activity" />
+
+    <Button
+        android:id="@+id/singleTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startActivity"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick"
+        android:text="@string/start_singleTop" />
+
+    <Button
+        android:id="@+id/singleTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singleTop"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick"
+        android:text="@string/start_singleTask" />
+
+    <Button
+        android:id="@+id/singleInstance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singleTask"
+        android:layout_marginBottom="20dp"
+        android:onClick="onClick"
+        android:text="@string/start_singleInstance" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singleInstance"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="Hello World!" />
+
+</RelativeLayout>
