@@ -50,63 +50,63 @@
 
 <br />
 
-    创建一个新的Activity：
+&nmsp;&nmsp;创建一个新的Activity：
 > onCreate() -> onStart() -> onResume()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/createtop.png)
     
 <br />
     
-    从一个Activity跳转到新的Activity，它先调用的是当前的Activity的onPause()，先停止当前当前的Activity的操作，再创建新的Activity，等创建完新的Activity再将原Activity变为不可见：
+&nmsp;&nmsp;从一个Activity跳转到新的Activity，它先调用的是当前的Activity的onPause()，先停止当前当前的Activity的操作，再创建新的Activity，等创建完新的Activity再将原Activity变为不可见：
 > onPause() -> onCreate() -> onStart() -> onResume() -> onStop() 
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/startnewactivity.png)
     
 <br />
     
-    如果按返回键退回到上一个Activity：
+&nmsp;&nmsp;如果按返回键退回到上一个Activity：
 > onPause() -> onRestart() -> onStart() -> onResume() -> onStop() -> onDestory()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backlastactivity.png)
     
 <br />
-    
-    打开一个透明主题的Activity
+
+&nmsp;&nmsp;打开一个透明主题的Activity
 > onPause() -> onCreate() -> onStart() -> onResume()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/startthemeactivity.png)
     
 <br />
     
-    从透明主题的Activity返回到之前的Activity
+&nmsp;&nmsp;从透明主题的Activity返回到之前的Activity
 > onPause() -> onResume() -> onStop() -> onDestory()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backthemeactivity.png)
     
 <br />
     
-    锁屏：
+&nmsp;&nmsp;锁屏：
 > onPause() -> onStop()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/lockscreen.png)
     
 <br />
     
-    解锁:
+&nmsp;&nmsp;解锁:
 > onRestart() -> onStart() -> onResume()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/unlockscreen.png)
     
 <br />
     
-    按HOME键退回到主页面
+&nmsp;&nmsp;按HOME键退回到主页面
 > onPause() -> onStop()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backhome.png)
     
 <br />
     
-    从主页面回到应用程序
+&nmsp;&nmsp;从主页面回到应用程序
 > onRestart() -> onStart() -> onResume()
     
 ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backactivity.png)
