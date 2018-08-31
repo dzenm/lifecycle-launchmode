@@ -10,31 +10,31 @@
 
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystart_en.png)
     
-    <br />
+<br />
 
     * 中文
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystart_zh.png)
     
-    <br />
+<br />
 
     * Activity 进栈和出栈方式
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystackinandout.png)
     
-    <br />
+<br />
     
     * Activity 栈内结构
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystacksave.png)
     
-    <br />
+<br />
     
     * Activity 运行实例
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystackrun.png)
     
-    <br /><br />
+<br /><br />
 
 ### 2. android生命周期的生存期
 
@@ -55,63 +55,63 @@
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/createtop.png)
     
-    <br />
+<br />
     
     从一个Activity跳转到新的Activity，它先调用的是当前的Activity的onPause()，先停止当前当前的Activity的操作，再创建新的Activity，等创建完新的Activity再将原Activity变为不可见：
     > onPause() -> onCreate() -> onStart() -> onResume() -> onStop() 
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/startnewactivity.png)
     
-    <br />
+<br />
     
     如果按返回键退回到上一个Activity：
     > onPause() -> onRestart() -> onStart() -> onResume() -> onStop() -> onDestory()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backlastactivity.png)
     
-    <br />
+<br />
     
     打开一个透明主题的Activity
     > onPause() -> onCreate() -> onStart() -> onResume()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/startthemeactivity.png)
     
-    <br />
+<br />
     
     从透明主题的Activity返回到之前的Activity
     > onPause() -> onResume() -> onStop() -> onDestory()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backthemeactivity.png)
     
-    <br />
+<br />
     
     锁屏：
     > onPause() -> onStop()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/lockscreen.png)
     
-    <br />
+<br />
     
     解锁:
     > onRestart() -> onStart() -> onResume()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/unlockscreen.png)
     
-    <br />
+<br />
     
     按HOME键退回到主页面
     > onPause() -> onStop()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backhome.png)
     
-    <br />
+<br />
     
     从主页面回到应用程序
     > onRestart() -> onStart() -> onResume()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backactivity.png)
     
-    <br /><br />
+<br /><br />
 
 ### 二、Activity的启动模式
 
@@ -141,4 +141,4 @@
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/singleinstance.gif)
     
-    <br /><br />
+<br /><br />
