@@ -6,31 +6,31 @@
 
 <br />
 
-    * 英文
+* 英文
 
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystart_en.png)
     
 <br />
 
-    * 中文
+* 中文
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystart_zh.png)
     
 <br />
 
-    * Activity 进栈和出栈方式
+* Activity 进栈和出栈方式
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystackinandout.png)
     
 <br />
     
-    * Activity 栈内结构
+* Activity 栈内结构
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystacksave.png)
     
 <br />
     
-    * Activity 运行实例
+* Activity 运行实例
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/activitystackrun.png)
     
@@ -40,9 +40,9 @@
 
 <br />
 
-    * 完整生存期：Activity从创建Activity( onCreate() ) 到销毁Activity( onDestory() )所经历的时期
-    * 可见生存期：Activity在 onStart() 方法中开始可见，但不能与用户进行交互，在 onStop() 方法中变为不可见。如果Activity 没有重新创建，它会调用 onRestart() 方法。
-    * 前台生存期：Activity处于允许状态，它可以与用户进行交互，它会调用 onResume() 方法，与之对应的为 onPause() 方法。
+* 完整生存期：Activity从创建Activity( onCreate() ) 到销毁Activity( onDestory() )所经历的时期
+* 可见生存期：Activity在 onStart() 方法中开始可见，但不能与用户进行交互，在 onStop() 方法中变为不可见。如果Activity 没有重新创建，它会调用 onRestart() 方法。
+* 前台生存期：Activity处于允许状态，它可以与用户进行交互，它会调用 onResume() 方法，与之对应的为 onPause() 方法。
     
 <br /><br />
 
@@ -51,63 +51,63 @@
 <br />
 
     创建一个新的Activity：
-    > onCreate() -> onStart() -> onResume()
+> onCreate() -> onStart() -> onResume()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/createtop.png)
     
 <br />
     
     从一个Activity跳转到新的Activity，它先调用的是当前的Activity的onPause()，先停止当前当前的Activity的操作，再创建新的Activity，等创建完新的Activity再将原Activity变为不可见：
-    > onPause() -> onCreate() -> onStart() -> onResume() -> onStop() 
+> onPause() -> onCreate() -> onStart() -> onResume() -> onStop() 
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/startnewactivity.png)
     
 <br />
     
     如果按返回键退回到上一个Activity：
-    > onPause() -> onRestart() -> onStart() -> onResume() -> onStop() -> onDestory()
+> onPause() -> onRestart() -> onStart() -> onResume() -> onStop() -> onDestory()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backlastactivity.png)
     
 <br />
     
     打开一个透明主题的Activity
-    > onPause() -> onCreate() -> onStart() -> onResume()
+> onPause() -> onCreate() -> onStart() -> onResume()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/startthemeactivity.png)
     
 <br />
     
     从透明主题的Activity返回到之前的Activity
-    > onPause() -> onResume() -> onStop() -> onDestory()
+> onPause() -> onResume() -> onStop() -> onDestory()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backthemeactivity.png)
     
 <br />
     
     锁屏：
-    > onPause() -> onStop()
+> onPause() -> onStop()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/lockscreen.png)
     
 <br />
     
     解锁:
-    > onRestart() -> onStart() -> onResume()
+> onRestart() -> onStart() -> onResume()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/unlockscreen.png)
     
 <br />
     
     按HOME键退回到主页面
-    > onPause() -> onStop()
+> onPause() -> onStop()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backhome.png)
     
 <br />
     
     从主页面回到应用程序
-    > onRestart() -> onStart() -> onResume()
+> onRestart() -> onStart() -> onResume()
     
     ![image](https://github.com/freedomeden/LifeCycleAndLaunchMode/blob/master/picture/backactivity.png)
     
